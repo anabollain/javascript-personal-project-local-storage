@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    /*General properties*/
+    width: 100vw;
+    min-height: 100vh;
+    background: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    /*Display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Todo list*/
+.todo{
+    /*General properties*/
+    width: 400px;
+    min-height: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.todo__title{
+    /*General properties*/
+    font-size: 20px;
+    text-align: center;
+}
+
+.todo__list{
+    /*General properties*/
+    list-style: none;
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*Items*/
+.todo__list--item{
+    /*Display*/
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /*Position*/
+    position: relative;
+}
+
+/*Delete icon*/
+.item__delete{
+    /*General properties*/
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+    /*Position*/
+    position: absolute;
+    right: 0;
+}
+
+.item__delete:hover{
+    color: grey;
+}
+
+/*Checkbox*/
+.item__checkbox{
+    /*General properties*/
+    cursor: pointer;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+    transition: 0.2s ease-in-out;
+}
+
+.item__checkbox:hover{
+    background-color: black;
+}
+
+.item__checkbox:checked{
+    background-color: black;
+}
+
+.item__checkbox::after{
+    content:'';
+    position: absolute;
+    width: 3.5px;
+    height: 8px;
+    border: solid white;
+    border-width:  0 3px 3px 0;
+    left: 5px;
+    top: 2px;
+    transform: rotate(45deg);
+}
+
+/*Label*/
+.item__label{
+    /*General properties*/
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*Todo form*/
+.todo__form{
+    /*Display*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo__form--input{
+    /*General properties*/
+    width: 200px; 
+    border-radius: 5px;
+    background-color: rgb(236, 232, 232);
+    border: 1px solid rgb(236, 232, 232);
+    padding: 5px;
+}
+
+.todo__form--submit{
+    /*General properties*/
+    cursor: pointer;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(236, 232, 232);
+    border: 1px solid rgb(236, 232, 232);
+    padding: 5px;
+    transition: .2s ease-in-out;
+}
+
+.todo__form--submit:hover{
+    /*General properties*/
+    background-color: white;
+    border: 1px solid grey;
+}
